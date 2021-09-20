@@ -1,0 +1,39 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: rgba(23, 141, 141, 0.5) solid 2px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  margin: 10px 0;
+  padding: 10px 14px;
+  /* box-shadow: 0px 1px 10px 2px rgb(23, 141, 141); */
+  text-decoration: none;
+}
+.button-item {
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+  width: 48px;
+}
+/* .button-check:hover {
+  color: rgb(5, 170, 5);
+} */
+.button-x:hover {
+  color: red;
+}
+.button-item:hover {
+  font-weight: 700;
+}
+.button-check--active {
+  color: rgb(5, 170, 5);
+}
+.list-item-text--complete {
+  text-decoration: line-through;
+}
