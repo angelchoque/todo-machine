@@ -1,16 +1,17 @@
 import React from 'react'
+import { TodoContext } from '../context/TodoContext'
 
 import '../style/components/CreateTodoButton.css'
 
 export const CreateTodoButton = () => {
-    const handleClick = () => {
-        console.log('click')
-    }
+    const {openModal, setOpenModal} = React.useContext(TodoContext)
+    // openModal ? setOpenModal(false) : setOpenModal(true)
+    const onClickButton = () => setOpenModal(!openModal)
     return (
         <div>
             <button 
-                className="button-add"
-                onClick={handleClick}    
+                className={openModal ? 'button-add button-add--active' : 'button-add'}
+                onClick={onClickButton} 
             >+</button>
         </div>
     )

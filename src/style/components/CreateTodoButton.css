@@ -21,24 +21,37 @@
   font-size: 32px;
   font-weight: bold;
   position: fixed;
-  z-index: 200;
+  z-index: 900;
   /* top: 0; */
   right: 0;
   left: 0;
-  bottom: 50px;
+  bottom: 100px;
   opacity: 0.5;
 }
 .button-add:hover {
-  /*width: 54px;
-  height: 54px;
-  */
-  transform: scale(1.2, 1.2);
+  /* transform: scale(1.2, 1.2);
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
   -ms-transform: scale(1.2, 1.2);
-  -o-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2); */
+
+  opacity: 1;
 }
-.button-add:focus {
+/* .button-add:focus {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+} */
+/* .button-add:active {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+} */
+.button-add--active {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);

@@ -1,8 +1,13 @@
 import React from 'react'
 
+import { TodoContext } from '../context/TodoContext'
+
 import '../style/components/TodoCounter.css'
 
-export const TodoCounter = ({totalTodos, completedTodos}) => {
+export const TodoCounter = () => {
+
+    const {totalTodos, completedTodos} = React.useContext(TodoContext)
+
     return(
         <div className="todo-counter">
             <h1 className="todo-title">Tasks 😁</h1>
