@@ -11,6 +11,8 @@ import { TodoSearch } from '../components/TodoSearch'
 import { Modal } from '../modal/Modal'
 import { TodoForm } from '../modal/TodoForm'
 
+import '../style/Loading.css'
+
 export const AppUI = () => {
 
     const {
@@ -30,7 +32,7 @@ export const AppUI = () => {
             <TodoSearch />
             <TodoList>
                 {error && <p>Error 404, failed</p>}
-                {loading && <p>Estamos Cargando</p>}
+                {loading && <div className='loading-container'><div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>}
                 {(!loading && !serchedTodos.length) && <p>Crea Tu primer TODO😉</p>}
                 {serchedTodos.map(item => (
                     <TodoItem 
