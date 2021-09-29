@@ -7,6 +7,7 @@ import '../style/modal/TodoForm.css'
 export function TodoForm() {
 
     const [newTodoValue, setNewTodoValue] = React.useState('')
+    const [blurVer, setBlurVer] = React.useState(false)
 
     const onChangeTodo = (event) =>{
         setNewTodoValue(event.target.value)
@@ -20,22 +21,36 @@ export function TodoForm() {
         setOpenModal(false)
     }
     const onSubmitTodo = (event) =>{
-        // debugger
         event.preventDefault()
-        addTodo(newTodoValue)
-        setOpenModal(false)
+        if (!newTodoValue){
+            setBlurVer(true)
+        } else {
+            addTodo(newTodoValue)
+            setOpenModal(false)
+        }
     }
+    const onBlurTodo = () =>{
+        console.log('Hola')
+        !newTodoValue ? setBlurVer(true) : setBlurVer(false)
+    }
+    
     return (
         <form action="" onSubmit={onSubmitTodo}>
             <label htmlFor="todoFormInput">Escribe tu Nueva tarea</label>
             <textarea 
                 value={newTodoValue}
                 onChange={onChangeTodo}
+                onBlur={onBlurTodo}
+                onFocus={()=>{
+                    setBlurVer(false)
+                }}
                 id='todoFormInput'
                 name='todoFormInput'
-                cols="20" 
-                rows="10" 
-                placeholder='Terminar los cursos de platzi'></textarea>
+                placeholder='Terminar los cursos de platzi'
+                className={`text-area ${blurVer && "text-area--undefined"}`}
+                >
+            </textarea>
+            {blurVer && <p className="text-alert">No puedes dejar el campo vacio</p>}
             <div className='todoform-button-container'>
                 <button 
                     type='button'

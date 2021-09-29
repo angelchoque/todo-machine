@@ -1,8 +1,8 @@
 form {
   width: 90%;
-  max-width: 300px;
+  max-width: 450px;
   background-color: #fff;
-  padding: 24px 40px;
+  padding: 32px 40px;
   display: flex;
   align-content: center;
   flex-direction: column;
@@ -26,59 +26,84 @@ label:hover {
 
 textarea {
   background-color: #f9fbfc;
-  /* border: 2px, solid #202329; */
+  /*border: 2px, solid #202329;
+  */
   border-radius: 2px;
-  box-shadow: 0px5px50pxrgba (32, 35, 41, 0.25);
+  box-shadow: 0px 5px 50px 0 rgba (32, 35, 41, 0.25);
   color: #1e1e1f;
   font-size: 20px;
-  text-align: center;
+  /*text-align: center;
+  */
   padding: 12px;
   height: 96px;
-  width: calc(100%-25px);
+  width: 100%;
+  /*width: calc(100%-25px);
+  */
   outline: none;
-  margin-bottom: 16px;
+  resize: vertical;
+  /*margin-bottom: 16px;
+  */
+  min-height: 150px;
+  border: teal 1px;
 }
 
 textarea::-webkit-input-placeholder {
   color: #a5a5a5;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
 textarea::-moz-placeholder {
   color: #a5a5a5;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
 textarea:-ms-input-placeholder {
   color: #a5a5a5;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
 textarea::-ms-input-placeholder {
   color: #a5a5a5;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
 textarea::placeholder {
   color: #a5a5a5;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 textarea:focus {
-  /* outline-color: #61dafa; */
+  border: 2px solid #61dafa;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+textarea::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
 }
 .todoform-button-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 16px;
 }
 .button-form {
   width: 48%;
   outline: none;
-  height: 36px;
+  height: 40px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -98,4 +123,12 @@ textarea:focus {
 }
 .button-form--submit {
   background-color: teal;
+}
+
+.text-area--undefined {
+  border: 2px solid red;
+}
+
+.text-alert {
+  color: red;
 }

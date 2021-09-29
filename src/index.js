@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { App } from './pages/App'
 
+import './style/normalize.css'
 import './style/globals.css'
 
 

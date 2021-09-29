@@ -5,6 +5,7 @@
 }
 body {
   background-color: rgb(23, 141, 141);
+  /* width: 100%; */
 }
 html {
   font-family: sans-serif;
