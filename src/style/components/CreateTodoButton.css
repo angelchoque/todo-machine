@@ -29,32 +29,20 @@
   opacity: 0.5;
 }
 .button-add:hover {
-  /* transform: scale(1.2, 1.2);
-  -webkit-transform: scale(1.2, 1.2);
-  -moz-transform: scale(1.2, 1.2);
-  -ms-transform: scale(1.2, 1.2);
-  -o-transform: scale(1.2, 1.2); */
-
   opacity: 1;
 }
-/* .button-add:focus {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-} */
-/* .button-add:active {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-} */
 .button-add--active {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+@media (max-width: 600px) {
+  .button-add {
+    right: 16px;
+    left: auto;
+    bottom: 40px;
+    top: auto;
+  }
 }
