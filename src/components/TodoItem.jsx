@@ -3,12 +3,6 @@ import React from 'react'
 import '../style/components/TodoItem.css'
 
 export const TodoItem = (props) => {
-    // const onComplete = () =>{
-    //     console.log('completed')
-    // }
-    // const onDelete = () =>{
-    //     console.log('deleted')
-    // }
     return (
         <li className="list-item">
             <button 

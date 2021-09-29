@@ -18,9 +18,7 @@ function TodoProvider(props) {
 
     const [searchValue, setSearchValue] = React.useState('')
     const [openModal, setOpenModal] = React.useState(false)
-    const [checkCompleteTodo, setCheckCompleteTodo] = React.useState(false)
 
-    // debugger
     const completedTodos = todos.filter(todo => !!todo.completed).length
     const totalTodos = todos.length
 
@@ -37,9 +35,7 @@ function TodoProvider(props) {
     }
 
     const addTodo = (text) => {
-        // debugger
         const newTodos = [...todos]
-        // debugger
         newTodos.push({
             text,
             completed: false,
@@ -48,15 +44,11 @@ function TodoProvider(props) {
     }
     const completeTodo = (text) => {
         const todoIndex = todos.findIndex(todo => todo.text === text)
-        setCheckCompleteTodo(true)
         const newTodos = [...todos]
-        newTodos[todoIndex].completed = true
+        
+        !newTodos[todoIndex].completed ? newTodos[todoIndex].completed = true : newTodos[todoIndex].completed = false
 
         saveTodos(newTodos)
-        // todos[todoIndex] = {
-        //     text: todos[todoIndex].text,
-        //     completed: true,
-        // }
     }
 
     const deleteTodo = (text) => {
@@ -83,8 +75,6 @@ function TodoProvider(props) {
                 deleteTodo,
                 openModal,
                 setOpenModal,
-                setCheckCompleteTodo,
-                checkCompleteTodo
             }}>
             {props.children}
         </TodoContext.Provider>

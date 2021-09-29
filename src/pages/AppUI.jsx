@@ -37,7 +37,7 @@ export const AppUI = () => {
                 {serchedTodos.map(item => (
                     <TodoItem 
                         key={item.text}
-                        text={item.text} 
+                        text={item.text}
                         completed={item.completed}
                         onComplete={() => completeTodo(item.text)}
                         onDelete={() => deleteTodo(item.text)}

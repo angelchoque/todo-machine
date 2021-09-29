@@ -30,7 +30,6 @@ export function TodoForm() {
         }
     }
     const onBlurTodo = () =>{
-        console.log('Hola')
         !newTodoValue ? setBlurVer(true) : setBlurVer(false)
     }
     

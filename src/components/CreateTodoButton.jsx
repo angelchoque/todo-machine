@@ -5,7 +5,6 @@ import '../style/components/CreateTodoButton.css'
 
 export const CreateTodoButton = () => {
     const {openModal, setOpenModal} = React.useContext(TodoContext)
-    // openModal ? setOpenModal(false) : setOpenModal(true)
     const onClickButton = () => setOpenModal(!openModal)
     return (
         <div>
