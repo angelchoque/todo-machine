@@ -33,6 +33,7 @@ function TodoProvider(props) {
             return todoText.includes(searchText)
         })
     }
+    serchedTodos = serchedTodos.reverse()
 
     const addTodo = (text) => {
         const newTodos = [...todos]

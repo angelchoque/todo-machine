@@ -9,7 +9,7 @@ export const TodoSearch = () => {
     // const [] = React.useState('')
 
     const onSearchValueChange = (event) =>{
-        console.log(event.target.value)
+        // console.log(event.target.value)
         setSearchValue(event.target.value)
     }
 
