@@ -1,15 +1,10 @@
 import React from 'react'
 
-import { TodoContext } from '../context/TodoContext'
-
 import '../style/components/TodoCounter.css'
 
-export const TodoCounter = () => {
-
-    const {totalTodos, completedTodos} = React.useContext(TodoContext)
-
+export const TodoCounter = ({totalTodos, completedTodos, loading}) => {
     return(
-        <div className="todo-counter">
+        <div className={`todo-counter ${!!loading && "todo-counter--loading"}`}>
             <h1 className="todo-title">Tasks 😁</h1>
             {totalTodos > 0 ? <h2 
                 className="counter-state">Has completado {completedTodos} de {totalTodos} tareas

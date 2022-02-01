@@ -1,17 +1,13 @@
 import React from 'react'
 
 import { useLocalStorage } from './useLocalStorage'
-// es un objeto con propiedades, 2 conponentes * {Provider, Consumer}
-// const name = react.createContext()
-const TodoContext = React.createContext()
 
-
-// componente atajo para llegar 
-function TodoProvider(props) {
+function useTodos() {
 
     const {
         item: todos, 
         saveItem: saveTodos, 
+        sincronizeItem: sincronizeTodos,
         loading,
         error,
     } = useLocalStorage('TODOS_V1', [])
@@ -62,24 +58,22 @@ function TodoProvider(props) {
     }
 
     return (
-        <TodoContext.Provider 
-            value={{
-                loading,
-                error,
-                totalTodos,
-                completedTodos,
-                searchValue,
-                setSearchValue,
-                serchedTodos,
-                addTodo,
-                completeTodo,
-                deleteTodo,
-                openModal,
-                setOpenModal,
-            }}>
-            {props.children}
-        </TodoContext.Provider>
+        {
+            loading,
+            error,
+            totalTodos,
+            completedTodos,
+            searchValue,
+            setSearchValue,
+            serchedTodos,
+            addTodo,
+            completeTodo,
+            deleteTodo,
+            openModal,
+            setOpenModal,
+            sincronizeTodos,
+        }
     )
 }
 
-export {TodoContext, TodoProvider}
+export {useTodos}

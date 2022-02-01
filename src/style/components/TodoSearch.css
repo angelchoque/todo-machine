@@ -64,3 +64,8 @@
   -o-transform: rotate(45deg);
   color: rgb(23, 141, 141);
 }
+
+
+.search-input:disabled{
+  opacity: 25%;
+}

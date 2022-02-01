@@ -22,7 +22,6 @@
   font-weight: bold;
   position: fixed;
   z-index: 900;
-  /* top: 0; */
   right: 0;
   left: 0;
   bottom: 100px;
@@ -32,11 +31,11 @@
   opacity: 1;
 }
 .button-add--active {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
 }
 @media (max-width: 600px) {
   .button-add {
